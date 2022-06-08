@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+</head>
+<body>
+    <style type="text/css">
+        body {display: block;}
+        #instafeed-container {width:1200px;margin:0 auto;height:340px;overflow:hidden;}
+        #instafeed-container a img{ border:#ddd solid 1px;border-radius:4px;width: 13.3%;margin:5px;aspect-ratio: 1/1;}
+        .inst_tit {width:1200px;margin:0 auto;text-align:center;padding:10px 0 5px 0;font-size:26px;color:#b10f0f;font-weight:500;}
+        .is_tt {width:1200px;margin:0 auto;text-align:center;font-size:18px;margin-bottom:20px;}
+    
+        @media (max-width: 991px) {
+            #instafeed-container {width:100%;margin:0 auto;height:280px;overflow:auto;}
+            #instafeed-container::-webkit-scrollbar {display: none;}
+            #instafeed-container a img{ border:#ddd solid 1px;width: 22%;border-radius:3px;margin:5px;}
+            .inst_tit {width:100%;margin:0 auto;text-align:center;padding:20px 0 0px 0;font-size:24px;color:#b10f0f;font-weight:500;}
+            .is_tt {width:100%;margin:0 auto;text-align:center;font-size:17px;margin-bottom:20px;}		
+        }
+    </style>
+    
+    <h1 class="inst_tit">Woonggi Instagram</h1>
+    <p class="is_tt"><a href="https://www.instagram.com/wo00ogie/" target="_blank">@wo00ogie</a></p>
+    
+    <div id="instafeed-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+    <script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        target: "instafeed-container",
+        resolution: 'low_resolution',
+        accessToken: 'IGQVJYM3BmYXpsRVpWOXF5X3pZAN2ZAWZAlZAVd0RCMlFHY0hnNWpCWk5QejYyWmRLRzhJWmVwMXozRFZAHZA3ZABM3V6UC04M0NsSFVLVm1aZAjY5clFBMWFQaU1lUjNNcDZAXb0FTZA0NnektOd1pRNmRfNDdwYgZDZD'
+    });
+    userFeed.run();
+    </script>
+</body>
+</html>
